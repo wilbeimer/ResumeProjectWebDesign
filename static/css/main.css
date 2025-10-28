@@ -1,21 +1,9 @@
-:root {
-   --background_main: #1a1a1a; 
-   --background_secondary: #262626;
-   --primary_neon_blue: #b3ffff;
-   --secondary_blue: #00BCD4;
-   --accent_orange: #FF6600;
-   --accent_red: #FF0015;
-   --text_bright: #ccffff;
-   --text_dim: #8BE9FD;
-}
-
 body {
    font-family: 'Orbitron', sans-serif;
    padding: 10px;
    padding-left: 40px;
    padding-right: 40px;
    color: var(--text_bright);
-   text-shadow: 0 0 2px var(--text_bright);
    background-color: var(--background_secondary);
 }
 
@@ -26,18 +14,24 @@ h2 {
    text-underline-offset: 4px;
 }
 
-h1, h2{
-   text-shadow: 0 0 12px var(--text_bright);
+.glow {
+   text-shadow: 
+      0 0 8px currentColor;
 }
 
 nav {
    display: flex;
    justify-content: center;
-   gap: 40px;
+   gap: clamp(1rem, 10vw, 8rem);
+   flex-wrap: wrap;
    padding: 20px 0;
-   margin: 0 0;
-   top: 0;
+   margin: 15px 0 0 0;
    z-index: 1000;
+   border-radius: 12px;
+   border: 4px solid var(--accent_red);
+   box-shadow: 
+      0 0 30px var(--accent_red),
+      inset 0 0 10px var(--accent_red);
 }
 
 .section-link {
@@ -52,44 +46,67 @@ nav {
 }
 
 .section:hover {
-   outline: none;
-   transform: translateY(-4px);
    border: 2px solid var(--accent_orange);
    box-shadow: 
       0 4px 20px var(--accent_orange),
       inset 0 0 10px var(--accent_orange);
+   transform: translateY(-4px);
    cursor: pointer;
    transition: color 0.2s ease, text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.section:active {
+   border: 2px solid var(--accent_red);
+   box-shadow: 
+      0 4px 20px var(--accent_red),
+      inset 0 0 10px var(--accent_red);
 }
 
 a:link {
    color: var(--text_dim);
    transition: color 0.2s ease, text-shadow 0.3s ease, transform 0.2s ease;
    transform: translateY(-2px);
-   text-shadow: 0 2px 12px var(--text_bright);
    text-decoration-thickness: 1px;
    text-underline-offset: 2px;
 }
 
+nav a:link {
+   font-size: 1.4rem;
+   margin-top: 4px;
+   color: var(--accent_red);
+   transition: color 0.2s ease, text-shadow 0.3s ease, transform 0.2s ease;
+   text-decoration: none;
+   text-shadow: none;
+}
+
+nav a:hover {
+   text-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor;
+}
+
+nav a:active {
+   color: var(--accent_orange);
+   text-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor;
+}
+
 a.section-link:link {
    color: var(--text_bright);
-   text-shadow: none;
 }
 
 a:visited {
    color: var(--secondary_blue);
-   text-shadow: 0 0 4px var(--secondary_blue);
 }
 
 a:hover {
    outline: none;
    color: var(--accent_orange);
-   text-shadow: 0 0 10px var(--accent_orange);
 }
 
 a:active {
    color: var(--accent_red);
-   text-shadow: 0 0 10px var(--accent_red), 0 0 20px var(--accent_red);
 }
 
 h1 {
@@ -113,8 +130,8 @@ body::before {
    bottom: 10px;
    border: 3px solid var(--primary_neon_blue);
    box-shadow: 
-         0 0 10px var(--primary_neon_blue),
-         inset 0 0 5px var(--primary_neon_blue);
+         0 0 10px currentColor,
+         inset 0 0 5px currentColor;
    border-radius: 12px;
    pointer-events: none; 
    z-index: 9999;
@@ -122,16 +139,12 @@ body::before {
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 
-         0 0 10px var(--primary_neon_blue),
-         inset 0 0 5px var(--primary_neon_blue);
-  }
-  50% {
-    box-shadow: 
-         0 0 15px var(--primary_neon_blue),
-         inset 0 0 10px var(--primary_neon_blue);
-  }
+   0%, 100% {
+      box-shadow: 0 0 10px currentColor, inset 0 0 5px currentColor;
+   }
+   50% {
+      box-shadow: 0 0 15px currentColor, inset 0 0 10px currentColor;
+   }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -147,7 +160,7 @@ body::before {
    }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
    :root {
       --background_main: #f9ffff;         
       --background_secondary: #e6f7ff;    
@@ -159,13 +172,7 @@ body::before {
       --text_dim: #336870;                
    }
 
-   body, p, h1, h2, h3, h4, h5, h6, li, a, b, strong {
-      text-shadow: none !important;
+   .glow {
+      text-shadow: none;
    }
-
-   h1, h2 {
-      text-shadow: none !important;
-   }
-
 }
-
