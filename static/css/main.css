@@ -117,7 +117,7 @@ section {
    color: inherit; 
 }
 
-section:hover {
+.section-link section:hover {
    border: 2px solid var(--accent_orange);
    box-shadow: 
       0 4px 20px var(--accent_orange),
@@ -126,7 +126,7 @@ section:hover {
    transition: color 0.2s ease, text-shadow 0.3s ease, transform 0.2s ease;
 }
 
-section:active {
+.section-link section:active {
    border: 2px solid var(--accent_red);
    box-shadow: 
       0 4px 20px var(--accent_red),
