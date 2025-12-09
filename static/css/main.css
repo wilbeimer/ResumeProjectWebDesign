@@ -3,6 +3,7 @@ body {
    padding: 10px 40px;
    color: var(--text_bright);
    background-color: var(--background_dark);
+   margin: 0 auto;
 }
 
 a:link {
@@ -108,9 +109,56 @@ footer {
    text-underline-offset: 4px;
 }
 
+.section-link ul {
+   max-width: 60%;
+}
+
+.education {
+   display: grid;
+   grid-template-rows:  1fr minmax 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 10px 20px;
+   grid-template-areas: 
+      "main1 main1 pic1 pic1"
+      "blank-left side side blank-right"
+      "pic2 pic2 main2 main2";
+}
+
+.shenandoah-university-sec {
+   grid-area: main1;
+}
+
+.honors-activities-sec {
+   grid-area: main2;
+}
+
 .info {
-   float: right;
-   background-color: var(--secondary_blue);
+   grid-area: side;
+   border: 5px solid var(--accent_orange);
+}
+
+.blank-left {
+   grid-area: blank-left;
+}
+
+.blank-right {
+   grid-area: blank-right;
+}
+
+#zig-zag1 {
+   grid-area: pic1;
+   width: 100%;
+   height: auto;
+   max-width: 600px;
+   justify-self: center;
+   align-self: center;
+   display: block;
+   border-radius: 5%;
+   border: 2px solid var(--primary_neon_blue);
+}
+
+#zig-zag2 {
+   grid-area: pic2;
 }
 
 h2 {
@@ -133,6 +181,12 @@ section {
    border-radius: 12px;
    padding: 16px;
    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-grid {
+   display: grid;
+   grid: 1fr 1fr / 1fr 1fr;
+   gap: 10px 80px;
 }
 
 .section-link:link {
@@ -175,20 +229,28 @@ section {
 }
 
 .right-column {
-   align-items: center;
-   justify-content: center;
+   display: block;
+   text-align: center;
    
    float: right;
    width: 45%;
 }
 
 .left-column {
+   justify-content: center;
+   text-align: center;
+   
+   float: left;
+   width: 45%;
+}
+
+.left-main {
    display: inline;
    align-items: center;
    justify-content: center;
    
    float: left;
-   width: 45%;
+   width: 60%;
 }
 
 img.social-icon {
@@ -206,13 +268,14 @@ img.social-icon:hover {
 }
 
 img.decorative-img {
-   width: 30%;
-   height: 30%;
+   position: fixed;
+   top: 35%;
+   left: 62%;
    max-width: 30%;
-   max-height: 30%;
-   float: right;
+   height: auto;
    border: 2px solid var(--primary_neon_blue);
    border-radius: 0.75rem;
+   scroll-behavior: smooth;
 }
 
 /*
@@ -258,7 +321,7 @@ img.decorative-img {
       --primary_neon_blue: #b3ffff;
       --secondary_blue: #00BCD4;
       --accent_orange: #FF6600;
-      --accent_red: #FF0015;
+      --accent_red: #00BCD4; /* FF0015 */
       --text_bright: #ccffff;
       --text_dim: #8BE9FD;
    }
@@ -271,7 +334,7 @@ img.decorative-img {
       --primary_neon_blue: #006d75;       
       --secondary_blue: #008caa;          
       --accent_orange: #ff7a00;           
-      --accent_red: #ff3366;              
+      --accent_red: #008caa; /* ff3366 */            
       --text_bright: #002b36;             
       --text_dim: #336870;                
    }
