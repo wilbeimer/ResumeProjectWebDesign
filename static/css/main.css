@@ -215,33 +215,39 @@ section {
    margin: 10px;
 }
 
+.certifications p {
+   background-color: var(--background_light);
+   padding: 30px;
+   border-radius: 30px;
+   line-height: 1.6;
+}
+
 .star {
    display: flex;
    align-items: center;
    justify-content: center;
    width: 500px;
    height: 500px; 
-   background-image: url("../../images/shapes/star-dark.png");
+   background-image: url("../../images/shapes/star.png");
    background-repeat: no-repeat;
    background-position: center;
-   background-size: 2500px;
+   background-size: 100%;
    text-align: center;
 }
 
-.right-column {
-   display: block;
-   text-align: center;
+.right-column, .left-column {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    
    float: right;
    width: 45%;
+   margin: 20px;
 }
 
-.left-column {
-   justify-content: center;
-   text-align: center;
-   
-   float: left;
-   width: 45%;
+.pdf-viewer {
+   width: 90%;
+   border: 2px solid var(--primary_neon_blue);
 }
 
 .left-main {
