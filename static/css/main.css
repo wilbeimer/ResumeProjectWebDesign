@@ -134,6 +134,7 @@ footer {
 
 .shenandoah-university-sec p, .honors-activities-sec p {
    background-color: var(--background_light);
+   color: var(--text_dim);
    padding: 30px;
    border-radius: 30px;
    line-height: 1.6;
@@ -249,6 +250,7 @@ section {
 
 .certifications p {
    background-color: var(--background_light);
+   color: var(--text_dim);
    padding: 30px;
    border-radius: 30px;
    line-height: 1.6;
