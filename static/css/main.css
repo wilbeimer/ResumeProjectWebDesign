@@ -116,8 +116,8 @@ footer {
 .education {
    display: grid;
    grid-template-rows:  1fr minmax 1fr;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   gap: 10px 20px;
+   grid-template-columns: 1fr 10% 10% 1fr;
+   gap: 10px 0;
    grid-template-areas: 
       "main1 main1 pic1 pic1"
       "blank-left side side blank-right"
@@ -130,6 +130,13 @@ footer {
 
 .honors-activities-sec {
    grid-area: main2;
+}
+
+.shenandoah-university-sec p, .honors-activities-sec p {
+   background-color: var(--background_light);
+   padding: 30px;
+   border-radius: 30px;
+   line-height: 1.6;
 }
 
 .info {
@@ -159,6 +166,14 @@ footer {
 
 #zig-zag2 {
    grid-area: pic2;
+   width: 100%;
+   height: auto;
+   max-width: 600px;
+   justify-self: center;
+   align-self: center;
+   display: block;
+   border-radius: 5%;
+   border: 2px solid var(--primary_neon_blue);
 }
 
 h2 {
