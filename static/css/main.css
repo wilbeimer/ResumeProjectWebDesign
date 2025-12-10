@@ -1,3 +1,6 @@
+/* 
+  Global body styling: sets font, padding, text color, background, and center margin 
+*/
 body {
    font-family: 'Orbitron', sans-serif;
    padding: 10px 40px;
@@ -6,6 +9,7 @@ body {
    margin: 0 auto;
 }
 
+/* Link states */
 a:link {
    color: var(--text_dim);
    transition: color 0.2s ease, text-shadow 0.3s ease, transform 0.2s ease;
@@ -27,6 +31,7 @@ a:active {
    color: var(--accent_red);
 }
 
+/* Unordered list styles */
 ul {
    list-style-position: inside; 
    padding-left: 1.5rem;     
@@ -44,6 +49,7 @@ ul li::marker {
    font-weight: bold;          
 }
 
+/* Navigation bar styling */
 nav {
    display: flex;
    justify-content: center;
@@ -54,8 +60,8 @@ nav {
    z-index: 1000;
    border-radius: 12px;
    border: 2px solid var(--accent_red);
-   box-shadow: 
-      0 0 25px var(--accent_red);
+   box-shadow: 0 0 25px var(--accent_red);
+   animation: pulseGlow 4s infinite ease-in-out;
 }
 
 nav a:link {
@@ -68,18 +74,15 @@ nav a:link {
 }
 
 nav a:hover {
-   text-shadow: 
-      0 0 10px currentColor,
-      0 0 20px currentColor;
+   text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
 }
 
 nav a:active {
    color: var(--accent_orange);
-   text-shadow: 
-      0 0 10px currentColor,
-      0 0 20px currentColor;
+   text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
 }
 
+/* Footer alignment */
 address {
    text-align: center;
 }
@@ -89,19 +92,46 @@ footer {
    clear: both;
 }
 
-.timeline-element{
+/* Timeline layout */
+.timeline-pair {
+   width: 100%;
+   overflow: hidden;
+   margin: 60px 0;
+   position: relative;
+}
+
+.timeline-element {
    width: 50%;
-   clear: right;
+   height: 330px;
    float: left;
    border-right: 3px solid var(--accent_orange);
 }
 
-.timeline-element:nth-child(2n) {
+.timeline-img {
+   float: right;
+   width: 45%;
+   text-align: center;
+}
+
+.timeline-pair:nth-child(2n) .timeline-element {
    float: right;
    border-right: none;
    border-left: 3px solid var(--accent_orange);
 }
 
+.timeline-pair:nth-child(2n) .timeline-img {
+   float: left;
+}
+
+.timeline-img img, .timeline-img video {
+   width: auto;
+   max-height: 375px;
+   border: 2px solid var(--primary_neon_blue);
+   border-radius: 30px;
+   object-fit: cover;
+}
+
+/* Section link styling */
 .section-link h2 {
    text-decoration: underline;
    text-decoration-color: var(--secondary_blue);
@@ -113,9 +143,10 @@ footer {
    max-width: 60%;
 }
 
+/* Education grid layout */
 .education {
    display: grid;
-   grid-template-rows:  1fr minmax 1fr;
+   grid-template-rows: 1fr minmax 1fr;
    grid-template-columns: 1fr 10% 10% 1fr;
    gap: 10px 0;
    grid-template-areas: 
@@ -124,6 +155,7 @@ footer {
       "pic2 pic2 main2 main2";
 }
 
+/* Grid areas */
 .shenandoah-university-sec {
    grid-area: main1;
 }
@@ -132,6 +164,7 @@ footer {
    grid-area: main2;
 }
 
+/* Education section styling */
 .shenandoah-university-sec p, .honors-activities-sec p {
    background-color: var(--background_light);
    color: var(--text_dim);
@@ -140,11 +173,13 @@ footer {
    line-height: 1.6;
 }
 
+/* Side info styling */
 .info {
    grid-area: side;
    border: 5px solid var(--accent_orange);
 }
 
+/* Blank grid areas */
 .blank-left {
    grid-area: blank-left;
 }
@@ -153,8 +188,8 @@ footer {
    grid-area: blank-right;
 }
 
-#zig-zag1 {
-   grid-area: pic1;
+/* Zig-zag images styling */
+#zig-zag1, #zig-zag2 {
    width: 100%;
    height: auto;
    max-width: 600px;
@@ -163,20 +198,17 @@ footer {
    display: block;
    border-radius: 5%;
    border: 2px solid var(--primary_neon_blue);
+}
+
+#zig-zag1 {
+   grid-area: pic1;
 }
 
 #zig-zag2 {
    grid-area: pic2;
-   width: 100%;
-   height: auto;
-   max-width: 600px;
-   justify-self: center;
-   align-self: center;
-   display: block;
-   border-radius: 5%;
-   border: 2px solid var(--primary_neon_blue);
 }
 
+/* Headings styling */
 h2 {
    color: var(--accent_orange);
 }
@@ -187,10 +219,10 @@ h1 {
 }
 
 .glow {
-   text-shadow: 
-      0 0 8px currentColor;
+   text-shadow: 0 0 8px currentColor;
 }
 
+/* Section styling */
 section {
    margin-top: 10px;
    background-color: var(--background_light);
@@ -199,6 +231,7 @@ section {
    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Project grid styling */
 .project-grid {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
@@ -208,6 +241,14 @@ section {
 .project-showcase {
    display: flex;
    justify-content: center;
+}
+
+.project-description {
+   background-color: var(--background_light);
+   color: var(--text_dim);
+   padding: 30px;
+   border-radius: 30px;
+   line-height: 1.6;
 }
 
 .project img {
@@ -225,6 +266,11 @@ section {
    height: 487px;
 }
 
+/* Section link customization */
+.section-link .education-link p {
+   line-height: 1.4;
+}
+
 .section-link:link {
    text-decoration: none; 
    color: inherit; 
@@ -232,25 +278,23 @@ section {
 
 .section-link section:hover {
    border: 2px solid var(--accent_orange);
-   box-shadow: 
-      0 4px 20px var(--accent_orange),
-      inset 0 0 10px var(--accent_orange);
+   box-shadow: 0 4px 20px var(--accent_orange), inset 0 0 10px var(--accent_orange);
    cursor: pointer;
    transition: color 0.2s ease, text-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .section-link section:active {
    border: 2px solid var(--accent_red);
-   box-shadow: 
-      0 4px 20px var(--accent_red),
-      inset 0 0 10px var(--accent_red);
+   box-shadow: 0 4px 20px var(--accent_red), inset 0 0 10px var(--accent_red);
 }
 
+/* Social links styling */
 .social-links {
    display: inline;
    margin: 10px;
 }
 
+/* Certifications styling */
 .certifications p {
    background-color: var(--background_light);
    color: var(--text_dim);
@@ -259,6 +303,7 @@ section {
    line-height: 1.6;
 }
 
+/* Star shape styling */
 .star {
    display: flex;
    align-items: center;
@@ -272,30 +317,32 @@ section {
    text-align: center;
 }
 
+/* Right and left column layout */
 .right-column, .left-column {
    display: flex;
    flex-direction: column;
    align-items: center;
-   
    float: right;
    width: 45%;
    margin: 20px;
 }
 
+/* PDF viewer styling */
 .pdf-viewer {
    width: 90%;
    border: 2px solid var(--primary_neon_blue);
 }
 
+/* Left main column styling */
 .left-main {
    display: inline;
    align-items: center;
    justify-content: center;
-   
    float: left;
    width: 60%;
 }
 
+/* Social icons styling */
 img.social-icon {
    margin: 0 5px;
    width: 5%;
@@ -306,10 +353,11 @@ img.social-icon {
 }
 
 img.social-icon:hover {
-   transform: scale(1.1); /* Slight zoom in */
-   filter: drop-shadow(0 0 10px var(--primary_neon_blue)); /* Soft glow effect */
+   transform: scale(1.1);
+   filter: drop-shadow(0 0 10px var(--primary_neon_blue));
 }
 
+/* Decorative image styling */
 img.decorative-img {
    position: fixed;
    top: 35%;
@@ -321,17 +369,16 @@ img.decorative-img {
    scroll-behavior: smooth;
 }
 
-/*
 @keyframes pulseGlow {
    0%, 100% {
       box-shadow: 0 0 10px currentColor, inset 0 0 5px currentColor;
    }
    50% {
-      box-shadow: 0 0 15px currentColor, inset 0 0 10px currentColor;
+      box-shadow: 0 0 25px currentColor, inset 0 0 15px currentColor;
    }
 }
-*/
 
+/* Skills section styling */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -357,6 +404,7 @@ img.decorative-img {
    padding-left: 1rem;
 }
 
+/* Dark mode variables */
 @media (prefers-color-scheme: dark) {
    :root {
       --background_light: #FFFFFF08; 
@@ -364,12 +412,13 @@ img.decorative-img {
       --primary_neon_blue: #b3ffff;
       --secondary_blue: #00BCD4;
       --accent_orange: #FF6600;
-      --accent_red: #00BCD4; /* FF0015 */
+      --accent_red: #00BCD4;
       --text_bright: #ccffff;
       --text_dim: #8BE9FD;
    }
 }
 
+/* Light mode variables and glow removal */
 @media (prefers-color-scheme: light) {
    :root {
       --background_light: #f9ffff;         
@@ -377,7 +426,7 @@ img.decorative-img {
       --primary_neon_blue: #006d75;       
       --secondary_blue: #008caa;          
       --accent_orange: #ff7a00;           
-      --accent_red: #008caa; /* ff3366 */            
+      --accent_red: #008caa;            
       --text_bright: #002b36;             
       --text_dim: #336870;                
    }
@@ -386,3 +435,4 @@ img.decorative-img {
       text-shadow: none;
    }
 }
+

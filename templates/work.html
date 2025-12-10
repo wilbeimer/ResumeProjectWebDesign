@@ -5,11 +5,13 @@
       <title>Work - Wilson Beima</title>
 
       <link rel="stylesheet" href="../static/css/main.css">
+      <!-- Main CSS manages layout, timeline styling, and responsive elements -->
    </head>
    
    <body>
       <header>
          <nav>
+            <!-- Consistent nav across all pages -->
             <a href="home.html">Home</a> 
             <a href="education.html">Education</a> 
             <a href="projects.html">Projects</a> 
@@ -22,53 +24,88 @@
 
       <main>
          <div class='timeline'>
-            <section class="timeline-element">
-               <h2 class='glow'>[2023-Now] </h2>
-               <h3>General Tutor - Shenandoah University Math Enrichment Center, Winchester VA</h3>
-               <ul>
-                  <li>Tutored 240+ students per semester in Math & CS (Statistics, Algebra, Discrete, Calculus I–III).</li>
-                  <li>Helped students debug code and clarify programming concepts.</li>
-                  <li>Proctored exams and managed assignment logistics.</li>
-               </ul>
+            <div class="timeline-pair">
+               <section class="timeline-element">
+                  <h2 class='glow'>[2023-Now] </h2>
+                  <h3>General Tutor - Shenandoah University Math Enrichment Center, Winchester VA</h3>
+                  <ul>
+                     <!-- Handles large student volume, emphasizes breadth of tutoring across multiple math courses -->
+                     <li>Tutored 240+ students per semester in Math & CS (Statistics, Algebra, Discrete, Calculus I–III).</li>
+                     <li>Helped students debug code and clarify programming concepts.</li>
+                     <li>Proctored exams and managed assignment logistics.</li>
+                  </ul>
 
-               <h3>General Tutor - Shenandoah University Math Enrichment Center, Winchester VA</h3>
-               <ul>
-                  <li>Supported professors in Intro and Intermediate programming classes (~25 students).</li>
-                  <li>Spent 11+ hours/week assisting with Python & Java assignments.</li>
-                  <li>Taught practical programming applications.</li>
-               </ul>
-            </section>
-            <section class="timeline-element">
-               <h2 class='glow'>[2022–2023]</h2>
-               <h3>Programming Tutor - Code Ninjas, Burke VA</h3>
-               <ul>
-                  <li>Taught Scratch, JavaScript, Lua, and C# to ages 7–14.</li>
-                  <li>Managed classes of up to 20 students.</li>
-                  <li>Led outreach to local elementary schools and coordinated with community leaders.</li>
-               </ul>
-            </section>
-            <section class="timeline-element">
-               <h2 class='glow'>[2021-2023]</h2>
-               <h3>Assistant Swim Coach - Burke Centre Swim Club, Burke VA</h3>
-               <ul>
-                  <li>Coached 18 & under swimmers (~50–100 athletes).</li>
-                  <li>Planned workouts, led practices, and communicated with parents & board members.</li>
-                  <li>Transitioned from volunteer (2021) to paid assistant (2021–2023).</li>
-               </ul>
-            </section>
-            <section class="timeline-element">
-               <h2 class='glow'>[2021-2022]</h2>
-               <h3>Computer Science Volunteer TA - Robinson Secondary School, Fairfax VA</h3>
-               <ul>
-                  <li>Assisted ~25 computer science students.</li>
-                  <li>Supported teacher-led lessons in programming.</li>
-                  <li>Communicated progress and challenges with the instructor.</li>
-               </ul>
-            </section>
+                  <h3>General Tutor - Shenandoah University Math Enrichment Center, Winchester VA</h3>
+                  <ul>
+                     <!-- Highlights time commitment and support in programming courses -->
+                     <li>Supported professors in Intro and Intermediate programming classes (~25 students).</li>
+                     <li>Spent 11+ hours/week assisting with Python & Java assignments.</li>
+                     <li>Taught practical programming applications.</li>
+                  </ul>
+               </section>
+               
+               <div class="timeline-img">
+                  <img src="../images/work/mec.jpg" alt="picture of the math enrichment center">
+                  <!-- Image provides context for tutoring environment -->
+               </div>
+            </div>
+
+            <div class="timeline-pair">
+               <section class="timeline-element">
+                  <h2 class='glow'>[2022–2023]</h2>
+                  <h3>Programming Tutor - Code Ninjas, Burke VA</h3>
+                  <ul>
+                     <!-- Focus on teaching coding to younger students and community outreach -->
+                     <li>Taught Scratch, JavaScript, Lua, and C# to ages 7–14.</li>
+                     <li>Managed classes of up to 20 students.</li>
+                     <li>Led outreach to local elementary schools and coordinated with community leaders.</li>
+                  </ul>
+               </section>
+               
+               <div class="timeline-img">
+                  <video controls>
+                     <source src="../images/work/code_ninjas_video.mp4" type="">
+                     <!-- Video demonstrates interactive teaching or coding activities -->
+                     Your browser does not support this video tag
+                  </video>
+               </div>
+            </div>
+
+            <div class="timeline-pair">
+               <section class="timeline-element">
+                  <h2 class='glow'>[2021-2023]</h2>
+                  <h3>Assistant Swim Coach - Burke Centre Swim Club, Burke VA</h3>
+                  <ul>
+                     <!-- Shows progression from volunteer to paid position; emphasizes coaching responsibility -->
+                     <li>Coached 18 & under swimmers (~50–100 athletes).</li>
+                     <li>Planned workouts, led practices, and communicated with parents & board members.</li>
+                     <li>Transitioned from volunteer (2021) to paid assistant (2021–2023).</li>
+                  </ul>
+               </section>
+               
+               <div class="timeline-img">
+                  <img src="../images/work/coaching.png" alt="coaching at the stingers on senior night">
+                  <!-- Image highlights team environment and coaching context -->
+               </div>
+            </div>
+
+            <div class="timeline-pair">
+               <section class="timeline-element">
+                  <h2 class='glow'>[2021-2022]</h2>
+                  <h3>Computer Science Volunteer TA - Robinson Secondary School, Fairfax VA</h3>
+                  <ul>
+                     <!-- Volunteer experience shows early teaching exposure -->
+                     <li>Assisted ~25 computer science students.</li>
+                     <li>Supported teacher-led lessons in programming.</li>
+                     <li>Communicated progress and challenges with the instructor.</li>
+                  </ul>
+               </section>
+            </div>
          </div>
       </main>
       <footer>
          <div class="social-links">
+            <!-- Social icons dynamically switch images based on color scheme -->
             <a href="https://github.com/wilbeimer" target="_blank" rel="github profile">
                <picture>
                   <source srcset="../images/logos/github.png" media="(prefers-color-scheme: light)">
@@ -87,3 +124,4 @@
       </footer>
    </body>
 </html>
+

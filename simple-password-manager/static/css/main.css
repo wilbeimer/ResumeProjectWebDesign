@@ -1,14 +1,14 @@
 :root {
-  /* Core Backgrounds */
+  /* Core color variables for easier theme adjustments */
   --gunmetal: #393E41;
   --dust-grey: #D3D0CB;
   --carbon-black: #1E2019;
 
-  /* Accents */
+  /* Accent colors for UI highlights */
   --old-gold: #E2C044;
   --pine-blue: #587B7F;
 
-  /* Semantic Roles (recommended) */
+  /* Semantic roles for consistent theming across components */
   --bg-main: var(--carbon-black);
   --bg-surface: var(--gunmetal);
   --bg-muted: var(--dust-grey);
@@ -21,6 +21,7 @@
 }
 
 body {
+   /* System font fallback for better cross-platform rendering */
    margin: 0;
    font-family: system-ui, sans-serif;
    background-color: var(--bg-main);
@@ -28,6 +29,7 @@ body {
 }
 
 .app-container {
+   /* Centralized content area with shadow for depth */
    background-color: var(--bg-surface);
    max-width: 800px;
    margin: .5rem .5rem;
@@ -37,6 +39,7 @@ body {
 }
 
 .btn-primary {
+   /* Highlighted action button with hover feedback */
    background-color: var(--old-gold);
    color: var(--text-dark);
    border: none;
@@ -48,10 +51,12 @@ body {
 }
 
 .btn-primary:hover {
+  /* Slight brightness increase to indicate interactivity */
   filter: brightness(1.05);
 }
 
 .btn-secondary {
+  /* Secondary actions, smaller and less emphasized */
   background-color: var(--pine-blue);
   color: white;
   border: none;
@@ -61,6 +66,7 @@ body {
 }
 
 input {
+   /* Styled input with consistent height and padding */
    background-color: var(--carbon-black);
    border: 1px solid var(--pine-blue);
    color: var(--text-main);
@@ -72,36 +78,42 @@ input {
 }
 
 input:focus {
+  /* Highlight input on focus to guide user attention */
   border-color: var(--old-gold);
 }
 
 table {
+  /* Full-width table with consistent spacing and collapse to avoid double borders */
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
 
 th {
+  /* Header cells with high contrast for readability */
   background-color: var(--pine-blue);
   color: white;
   padding: 0.7rem;
 }
 
 td {
+  /* Body cells with subtle separation */
   background-color: var(--gunmetal);
   padding: 0.6rem;
   border-bottom: 1px solid var(--carbon-black);
 }
 
 .hidden-password {
+   /* Reserve width to prevent layout shift when toggling visibility */
    font-family: monospace;
    display: inline-block;
    width: 16ch; /* reserve width for ~8 characters */
    text-align: left;
-   user-select: all;
+   user-select: all; /* Allow easy copying of masked password */
 }
 
 .show-password {
+   /* Small interactive toggle without disrupting layout */
    font-size: 10px;
    padding: 2px 4px;
    cursor: pointer;
@@ -109,11 +121,12 @@ td {
 }
 
 a {
+   /* Default link color aligned with primary accent */
    color: var(--old-gold);
 }
 
 .top-row {
-   /* FIX 1: Display header and link side-by-side */
+   /* Align header and logout button horizontally */
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -127,6 +140,7 @@ a {
 }
 
 .top-row a {
+   /* Standout logout button with smooth hover transition */
    text-decoration: none;
    color: white;
    background-color: #dc3545; /* Red color for logout button */
@@ -136,14 +150,16 @@ a {
 }
 
 .top-row a:hover {
-   background-color: #c82333;
+   background-color: #c82333; /* Darker red on hover for feedback */
 }
 
 .glow {
+  /* Subtle glow effect for emphasis */
   box-shadow: 0 0 12px rgba(226, 192, 68, 0.6);
 }
 
 .password-generator {
+   /* Small container for generator inputs to distinguish from main UI */
    background-color: var(--old-gold);
    max-width: 40%;
    margin: .5rem 0;
@@ -152,17 +168,21 @@ a {
 }
 
 #length {
+   /* Compact input for password length */
    width: 35px;
 }
 
 #password-output {
+    /* Ensure password output is copy-friendly and visually clear */
     display: block; /* Make it take its own line */
     text-align: center; /* Center the generated password */
     padding: 10px 15px;
     background-color: var(--carbon-black);
-    border: 1px solid var(--accent-primary); /* Use Old Gold border */
+    border: 1px solid var(--accent-primary); /* Use Old Gold border for visual tie-in */
     border-radius: 8px;
     font-family: monospace; /* Monospace font helps with character clarity */
-    word-break: break-all;
+    word-break: break-all; /* Avoid overflow on long passwords */
     user-select: all; /* Allows easy copying */
 }
+
+

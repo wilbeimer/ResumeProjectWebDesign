@@ -4,12 +4,14 @@
       <meta charset="UTF-8">
       <title>Certifications - Wilson Beima</title>
 
+      <!-- Main stylesheet with theme and layout definitions -->
       <link rel="stylesheet" href="../static/css/main.css">
    </head>
    
    <body>
       <header>
          <nav>
+            <!-- Site navigation links, highlight handled via CSS glow/hover -->
             <a href="home.html">Home</a> 
             <a href="education.html">Education</a> 
             <a href="projects.html">Projects</a> 
@@ -17,18 +19,23 @@
             <a href="skills.html">Skills</a> 
             <a href="certifications.html">Certifications</a>
          </nav>
+         <!-- Page title with glow effect -->
          <h1 class="glow">Certifications</h1>
       </header>
 
       <main>
          <div class="certifications">
+            <!-- Left column certification -->
             <section class="left-column">
                <div class="star">
+                  <!-- Decorative star background with heading -->
                   <h2 class="glow">AWS Cloud Practitioner</h2>
                </div>
 
+               <!-- Certification description; styled in CSS for readability -->
                <p>During my high school dual enrollment Computer Science class, I pursued the AWS Certified Cloud Practitioner certification. As part of this course, I studied core cloud concepts, services, and best practices, dedicating time in class and independently to mastering topics such as cloud computing fundamentals, security, and basic AWS architecture. This certification challenged me to apply what I was learning in real-world scenarios, and achieving it demonstrated my commitment to understanding cloud technologies at an early stage in my academic journey.</p>
 
+               <!-- PDF embed viewer fallback to download link if unsupported -->
                <div class="pdf-viewer">
                   <object data="../images/certifications/AWS_Certified_Cloud_Practitioner_certificate.pdf" type="application/pdf" width="100%" height="500px">
                      <p>Unable to display PDF file. <a href="../images/certifications/AWS_Certified_Cloud_Practitioner_certificate.pdf">Download</a> instead.</p>
@@ -36,6 +43,7 @@
                </div>
             </section>
 
+            <!-- Right column certification -->
             <section class="right-column">
                <div class="star">
                   <h2 class="glow">Azure Cloud Fundamentals</h2>
@@ -54,6 +62,7 @@
 
       <footer>
          <div class="social-links">
+            <!-- GitHub profile link with light/dark image variants -->
             <a href="https://github.com/wilbeimer" target="_blank" rel="github profile">
                <picture>
                   <source srcset="../images/logos/github.png" media="(prefers-color-scheme: light)">
@@ -61,14 +70,16 @@
                   <img src="../images/logos/github-white.png" alt="GitHub" class="social-icon">
                </picture>
             </a>
+            <!-- LinkedIn profile link with light/dark image variants -->
             <a href="https://www.linkedin.com/in/wilson-beima" target="_blank" rel="linkedin profile">
                <picture>
                   <source srcset="../images/logos/linkedin-black.png" media="(prefers-color-scheme: light)">
                   <source srcset="../images/logos/linkedin-white.png" media="(prefers-color-scheme: dark)">
-                  <img src="../images/logos/linkedin-white.png" alt="GitHub" class="social-icon">
+                  <img src="../images/logos/linkedin-white.png" alt="LinkedIn" class="social-icon">
                </picture>
             </a>
          </div>
       </footer>
    </body>
 </html>
+

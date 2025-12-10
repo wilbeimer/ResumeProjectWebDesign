@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Vault</title>
+    <!-- Link to main stylesheet with theme variables and component styles -->
     <link rel="stylesheet" href="../static/css/main.css">
 </head>
 <body>
     <div class="app-container">
         <div class="top-row">
             <h1>My Password Vault</h1>
+            <!-- Logout link styled as button, actual functionality not implemented -->
             <a href="#">Logout</a>
         </div>
 
-        <!-- Password Generator -->
+        <!-- Password Generator Section -->
         <div class="password-generator">
+            <!-- Input for desired password length -->
             <input type="text" id="length" value="20" min="8" max="50">
+            <!-- Trigger password generation -->
             <button id="generate-btn" class="btn-primary glow" type="button">Generate New</button>
             <div class="password-display">
+                <!-- Output area for generated password, updated via JS -->
                 <span id="password-output">Your password will appear here.</span>
             </div>
         </div>
 
-        <!-- Add Password -->
+        <!-- Add New Password Section -->
         <div class="add-password">
+            <!-- Inputs for site, username, and password -->
             <input id="site" placeholder="Site" required>
             <input id="username" placeholder="Username" required>
             <input id="password" placeholder="Password" required>
+            <!-- Trigger addition of new password to table -->
             <button id="add-btn" class="btn-primary glow" type="button">Save Password</button>
         </div>
 
         <hr>
 
+        <!-- Password Table -->
         <table border="1">
             <thead>
                 <tr>
@@ -41,11 +49,12 @@
                 </tr>
             </thead>
             <tbody id="password-table-body">
-                <!-- Filled by mock.js -->
+                <!-- Rows dynamically populated by mock.js -->
             </tbody>
         </table>
     </div>
 
+    <!-- Include mock password manager JS -->
     <script src="../static/js/mock.js"></script>
 </body>
 </html>
