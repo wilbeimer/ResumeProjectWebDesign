@@ -185,8 +185,25 @@ section {
 
 .project-grid {
    display: grid;
-   grid: 1fr 1fr / 1fr 1fr;
-   gap: 10px 80px;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px 80px;
+}
+
+.project-showcase {
+   display: flex;
+   justify-content: center;
+}
+
+.project img {
+   width: 70%;
+   height: auto;
+   border: 2px solid var(--primary_neon_blue);
+   border-radius: 20px;
+}
+
+.project video {
+   border: 2px solid var(--primary_neon_blue);
+   border-radius: 20px;
 }
 
 .section-link:link {
